@@ -4,6 +4,5 @@ class Product < ApplicationRecord
     has_many :ratings
     has_many :userProducts
     has_many :users, through: :userProducts
-    has_many :productCategories
-    has_many :categories, through: :productCategories
+    belongs_to :category
 end
