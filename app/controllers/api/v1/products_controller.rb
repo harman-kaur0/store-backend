@@ -13,7 +13,7 @@ class Api::V1::ProductsController < ApplicationController
     def show
       render json: product
     end
-  
+
     # POST /products
     # def create
     #   product = Product.new(product_params)
