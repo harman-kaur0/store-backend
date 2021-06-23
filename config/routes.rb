@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       resources :users
       resources :products
       post '/login', to:  'users#login'
+      get '/getuser', to: 'users#getuser'
     end
   end
 end
