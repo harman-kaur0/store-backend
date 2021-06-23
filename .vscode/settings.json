@@ -1,0 +1,11 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "Phase 4 Project",
+            "group": "Phase 4 Project",
+            "database": "${workspaceFolder:store-backend}/db/development.sqlite3"
+        }
+    ]
+}
