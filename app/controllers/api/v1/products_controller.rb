@@ -2,6 +2,8 @@ class Api::V1::ProductsController < ApplicationController
     before_action :set_product, only: [:show,
         #  :update, :destroy
         ]
+
+    skip_before_action :authorized
   
     # GET /products
     def index
