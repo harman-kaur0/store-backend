@@ -6,7 +6,7 @@ Rails.application.routes.draw do
       resources :products
       resources :categories
       post '/login', to:  'users#login'
-      post '/products', to:  'products#index'
+      get '/getuser', to: 'users#getuser'
     end
   end
 end
