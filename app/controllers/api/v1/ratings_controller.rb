@@ -1,4 +1,5 @@
 class Api::V1::RatingsController < ApplicationController
+  skip_before_action :authorized
 
   # GET /ratings
   def index
