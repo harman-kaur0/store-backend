@@ -8,8 +8,6 @@
 Category.destroy_all
 Product.destroy_all
 Comment.destroy_all
-# ProductCategory.destroy_all
-
 
 electronic = Category.create(name: "electronics") 
 home = Category.create(name: "home") 
@@ -20,8 +18,6 @@ toys = Category.create(name: "toys & games")
 beauty = Category.create(name: "beauty & health") 
 
 # ELECTRONIC
-
-
 Product.create(category: electronic, name: "Digital Camera, Lecran FHD 1080P 36.0 Mega Pixels Vlogging Camera with 16X Digital Zoom, LCD Screen, Compact Portable Mini Cameras for Students, Teens, Kids (Purple)", image: "https://images-na.ssl-images-amazon.com/images/I/71a5wNItTJL._AC_SL1500_.jpg", price: 48.99, description: "【FHD 1080P & 36MP Digital Camera】Featured with FHD 1080P resolution and 36.0 megapixels, this digital camera will help you to capture the most exciting memorable moments with good quality images or videoes. Totally fits your demand, you could have fun and record wonderful times with friends, family members, and classmates.")
 Product.create(category: electronic, name: "Digital Camera Vlogging Camera 30MP Full HD 1080P Digital Camera with Retractable Flash Light Camera 3 Inch Flip Screen Vlog Camera for YouTube with Two Batteries(32GB Micro SD Card Included)", image: "https://images-na.ssl-images-amazon.com/images/I/61TnMFVbLWS._AC_SL1000_.jpg", price: 99.98, description: "The digital camera supports 2.7K video resolution and 30MP picture resolution with good image quality.This vlogging camera has 3 inch full frame view flip screen which can rotate at 180 degrees, you can take selfies easily. The camera also supports 4x digital zoom, which means you can zoom in or out of the picture for better capture of the details.")
 Product.create(category: electronic, name: "Baby Monitor with Camera and Audio,Conico 1080P Pet Camera,Dog Camera with 2 Way Audio,Motion and Sound Detection,Night Vision,WiFi Camera Indoor Camera Work with Alexa for Baby Pet(2 Packs)", image: "https://images-na.ssl-images-amazon.com/images/I/61vQFdCJwhL._AC_SL1500_.jpg", price: 40.99, description: "1080P and 2-Megapixel:The video baby monitor is equipped with a 1080P camera and 2-megapixel,featuring 8x zoom,enable you capture hd videos and snapshot images.It could provide live streaming 24/7 with real-time motion to let you know what is going on for your home instantly.(please noticed:the home camera works with 2.4GHz Wi-Fi networks,Not 5GHz Wi-Fi)")
@@ -134,5 +130,5 @@ Product.create(category: sports, name: "Franklin Sports SypderPong Tennis - Tabl
 Product.create(category: sports, name: "NIBIRU SPORT Professional Ping Pong Paddle Set with Retractable Net (Bracket Clamps), Balls, and Posts (4-Star) Regulation Table Tennis Accessories, Advanced Home Indoor or Outdoor Play, Storage Case", image: "https://images-na.ssl-images-amazon.com/images/I/71LWijMh0XS._AC_SL1500_.jpg", price: 42.99, description: "Whether you’re just starting to play table tennis and like to practice, want to test skills against friends, you need quality rackets and balls to keep your game going strong. That’s why we created this universal Nibiru Sport Table Tennis Set that comes with high-quality plywood rackets and table tennis balls that help you get the most out of your play. Professional Level 5-Star Set, Soft Sponge Grip Technology, Flared, Triple-Sanded, Ergonomic Handle, Tacky and Elastic Rubber (High-Bounce, Killer Spin), Balls and Table Tennis Net Meet ITTF and USATT Standards, Designed in California")
 
 20.times do
-Comment.create(user_id: User.ids.sample, product_id: Product.ids.sample, text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", title: "Best Product Ever!")
+    Comment.create(user_id: User.ids.sample, product_id: Product.ids.sample, text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", title: "Best Product Ever!", rating: rand(1...5))
 end
