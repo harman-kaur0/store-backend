@@ -3,6 +3,8 @@ class Api::V1::CommentsController < ApplicationController
     before_action :set_comment, only: [:show, :update, :destroy]
     skip_before_action :authorized, only: [:index, :show]
 
+    skip_before_action :authorized
+
     def index
         comments = Comment.all
         render json: comments

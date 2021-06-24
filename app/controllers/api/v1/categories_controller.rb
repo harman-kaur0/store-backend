@@ -1,7 +1,9 @@
 class Api::V1::CategoriesController < ApplicationController
     before_action :set_product, only: [:show,
-        #  :update, :destroy
-        ]
+    #  :update, :destroy
+    ]
+    
+    skip_before_action :authorized
 
         # GET /categories
     def index
