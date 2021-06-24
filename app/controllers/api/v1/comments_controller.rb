@@ -44,6 +44,6 @@ class Api::V1::CommentsController < ApplicationController
 
     def comment_params
         # How to incorporate the timestamps into 
-        params.require(:comment).permit(:user_id, :product_id, :text, :title)
+        params.require(:comment).permit(:user_id, :product_id, :text, :title, :rating)
     end
 end

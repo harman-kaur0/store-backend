@@ -7,7 +7,6 @@ Rails.application.routes.draw do
       resources :users
       resources :products
       resources :categories
-      resources :ratings
       resources :comments
       post '/login', to:  'users#login'
       get '/getuser', to: 'users#getuser'

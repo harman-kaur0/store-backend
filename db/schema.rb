@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 2021_06_21_232917) do
     t.integer "product_id"
     t.string "text"
     t.string "title"
+    t.integer "rating"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["product_id"], name: "index_comments_on_product_id"
@@ -38,16 +39,6 @@ ActiveRecord::Schema.define(version: 2021_06_21_232917) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["category_id"], name: "index_products_on_category_id"
-  end
-
-  create_table "ratings", force: :cascade do |t|
-    t.integer "score"
-    t.integer "user_id"
-    t.integer "product_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["product_id"], name: "index_ratings_on_product_id"
-    t.index ["user_id"], name: "index_ratings_on_user_id"
   end
 
   create_table "user_products", force: :cascade do |t|
