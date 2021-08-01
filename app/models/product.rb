@@ -1,7 +1,7 @@
 class Product < ApplicationRecord
 
     has_many :comments
-    has_many :userProducts
-    has_many :users, through: :userProducts
+    has_many :orderProducts
+    has_many :orders, through: :orderProducts
     belongs_to :category
 end

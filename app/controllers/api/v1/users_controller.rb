@@ -25,7 +25,6 @@ class Api::V1::UsersController < ApplicationController
 
     def getuser
         user = User.find(decoded_token["user_id"])
-        puts user
         if user
             render json: {user: UserSerializer.new(user)}, status: :accepted
         end

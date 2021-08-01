@@ -4,8 +4,8 @@ class User < ApplicationRecord
     validates :name, :password, :email, presence: true
 
     has_many :comments
-    has_many :userProducts
-    has_many :products, through: :userProducts
+    has_many :orders
+    has_many :orderProducts, through: :orders
 
  
 end
