@@ -30,9 +30,18 @@ class Api::V1::UsersController < ApplicationController
         end
     end
 
+    def update
+        @user = User.find(params[:id])
+        if @user.update_attribute(:cart, params[:cart])
+            render json: @user
+        else
+            render json: {error: @user.errors}, status: :unprocessable_entity
+        end
+    end
+
     private
 
     def user_params
-        params.permit(:email, :password, :name)
+        params.permit(:email, :password, :name, cart: [])
     end
 end
