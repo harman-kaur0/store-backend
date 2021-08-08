@@ -5,6 +5,7 @@ class User < ApplicationRecord
     serialize :cart
 
     has_many :comments
+    has_many :orders
 
     after_initialize do |user|
         user.cart = [] if user.cart == nil
